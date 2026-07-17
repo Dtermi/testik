@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>История — Clarity</title>
+<meta name="description" content="Таймлайн развития Minecraft-сервера Clarity."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"/>
+<style>
+  .timeline{ position:relative; max-width:880px; margin:0 auto; padding:20px 0 40px; }
+  .timeline::before{
+    content:''; position:absolute; left:50%; top:0; bottom:0; width:2px;
+    background:linear-gradient(180deg, transparent, var(--sand-line) 8%, var(--sand-line) 92%, transparent);
+    transform:translateX(-50%);
+  }
+  .t-item{ position:relative; width:50%; padding:0 46px 74px; }
+  .t-item:nth-child(odd){ left:0; text-align:right; }
+  .t-item:nth-child(even){ left:50%; text-align:left; }
+  .t-dot{
+    position:absolute; top:4px; width:16px; height:16px; border-radius:50%;
+    background:linear-gradient(135deg,var(--sand-2),var(--sand-deep));
+    box-shadow:0 0 0 6px var(--bg-sand), 0 0 0 7px var(--sand-line);
+  }
+  .t-item:nth-child(odd) .t-dot{ right:-8px; }
+  .t-item:nth-child(even) .t-dot{ left:-8px; }
+  .t-card{
+    display:inline-block; text-align:left; padding:26px 28px; border-radius:var(--r-lg);
+    background:#fff; border:1px solid var(--line); max-width:400px;
+    transition:.35s var(--ease);
+  }
+  .t-card:hover{ transform:translateY(-4px); box-shadow:var(--shadow-md); border-color:var(--sand-line); }
+  .t-year{
+    display:inline-flex; font-size:12px; font-weight:800; letter-spacing:.1em; color:var(--olive);
+    background:rgba(62,74,47,.08); padding:4px 12px; border-radius:var(--r-pill); margin-bottom:12px;
+  }
+  .t-card h3{ font-size:18px; margin-bottom:8px; }
+  .t-card p{ font-size:14px; color:var(--ink-soft); }
+
+  @media(max-width:760px){
+    .timeline::before{ left:18px; }
+    .t-item, .t-item:nth-child(odd), .t-item:nth-child(even){
+      width:100%; left:0; text-align:left; padding:0 0 50px 52px;
+    }
+    .t-item:nth-child(odd) .t-dot, .t-item:nth-child(even) .t-dot{ left:10px; right:auto; }
+    .t-card{ max-width:100%; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" fill="#232B18"/><g stroke="#232B18" stroke-width="1.6" stroke-linecap="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></g></svg></span><span>Clarity<small>MINECRAFT · DESERT</small></span></a>
+    <div class="nav-links">
+      <a href="index.html">Главная</a>
+      <a href="donate.html">Донат</a>
+      <a href="discord.html">Discord</a>
+      <a href="about.html">О сервере</a>
+      <a href="social.html">Соцсети</a>
+      <a href="history.html">История</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn btn-primary btn-sm" data-copy="play.clarity.gg"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span class="full">play.clarity.gg</span></button>
+      <button class="nav-burger" aria-label="Меню"><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Главная</a>
+  <a href="donate.html">Донат</a>
+  <a href="discord.html">Discord</a>
+  <a href="about.html">О сервере</a>
+  <a href="social.html">Соцсети</a>
+  <a href="history.html">История</a>
+</div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="eyebrow reveal" style="margin:0 auto 20px;"><span class="dot"></span>Путь проекта</div>
+    <h1 class="reveal reveal-delay-1">История Clarity</h1>
+    <p class="reveal reveal-delay-2">От идеи в узком кругу друзей до сервера с тысячами игроков — вот как это было.</p>
+  </div>
+</header>
+
+<section class="container" style="padding-bottom:140px;">
+  <div class="timeline">
+    <div class="t-item reveal">
+      <span class="t-dot"></span>
+      <div class="t-card">
+        <span class="t-year">2022 · Зима</span>
+        <h3>Идея и первый прототип</h3>
+        <p>Небольшая команда разработчиков собралась, чтобы сделать Minecraft-сервер без лишнего шума — только качественный геймплей.</p>
+      </div>
+    </div>
+    <div class="t-item reveal reveal-delay-1">
+      <span class="t-dot"></span>
+      <div class="t-card">
+        <span class="t-year">2023 · Весна</span>
+        <h3>Выбор пустынного биома</h3>
+        <p>После нескольких тестов мира команда остановилась на пустыне — как на самой недооценённой и перспективной локации.</p>
+      </div>
+    </div>
+    <div class="t-item reveal reveal-delay-2">
+      <span class="t-dot"></span>
+      <div class="t-card">
+        <span class="t-year">2023 · Осень</span>
+        <h3>Закрытое альфа-тестирование</h3>
+        <p>Первые 50 игроков зашли на сервер, помогли найти баги и предложили механику песчаных бурь.</p>
+      </div>
+    </div>
+    <div class="t-item reveal">
+      <span class="t-dot"></span>
+      <div class="t-card">
+        <span class="t-year">2024 · Лето</span>
+        <h3>Публичный запуск</h3>
+        <p>Сервер открылся для всех. За первую неделю зарегистрировалось более 3000 игроков.</p>
+      </div>
+    </div>
+    <div class="t-item reveal reveal-delay-1">
+      <span class="t-dot"></span>
+      <div class="t-card">
+        <span class="t-year">2025 · Весна</span>
+        <h3>Гробницы и караваны</h3>
+        <p>Добавлены процедурные подземелья и NPC-караваны — крупнейшее контентное обновление в истории проекта.</p>
+      </div>
+    </div>
+    <div class="t-item reveal reveal-delay-2">
+      <span class="t-dot"></span>
+      <div class="t-card">
+        <span class="t-year">2026 · Сегодня</span>
+        <h3>Ребрендинг в Clarity</h3>
+        <p>Проект полностью переосмыслен: новый визуальный стиль, философия минимализма и честная экономика.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" fill="#232B18"/><g stroke="#F4C542" stroke-width="1.6" stroke-linecap="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></g></svg></span><span>Clarity</span></div>
+        <p style="max-width:280px; font-size:14px;">Современный Minecraft-сервер с пустынным биомом.</p>
+      </div>
+      <div class="footer-col"><h4>Проект</h4><a href="index.html">Главная</a><a href="about.html">О сервере</a><a href="history.html">История</a></div>
+      <div class="footer-col"><h4>Комьюнити</h4><a href="discord.html">Discord</a><a href="social.html">Соцсети</a><a href="donate.html">Донат</a></div>
+      <div class="footer-col"><h4>Сервер</h4><a data-copy="play.clarity.gg" href="javascript:void(0)">IP: play.clarity.gg</a><a href="discord.html">Поддержка</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Clarity. Проект не связан с Mojang AB.</span><span>Сделано с любовью к пустыне 🏜</span></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

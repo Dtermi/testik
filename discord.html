@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Discord — Clarity</title>
+<meta name="description" content="Присоединяйтесь к комьюнити Clarity в Discord."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"/>
+<style>
+  .discord-hero{
+    padding:170px 0 90px; position:relative; overflow:hidden;
+  }
+  .discord-card{
+    max-width:920px; margin:0 auto; padding:56px 48px; text-align:center;
+    border-radius:var(--r-lg); position:relative; overflow:hidden;
+    background:linear-gradient(155deg, var(--olive-deep), #2e3821);
+    color:#F6EFDD;
+  }
+  .discord-card::before{
+    content:''; position:absolute; inset:0;
+    background:radial-gradient(600px 300px at 15% 0%, rgba(244,197,66,.25), transparent 60%);
+    pointer-events:none;
+  }
+  .discord-card h1{ color:#fff; font-size:clamp(30px,4.4vw,44px); margin-bottom:14px; position:relative; }
+  .discord-card p{ color:rgba(246,239,221,.75); max-width:520px; margin:0 auto 30px; position:relative; font-size:16px; }
+  .online-pill{
+    display:inline-flex; align-items:center; gap:10px; background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15); padding:9px 18px; border-radius:var(--r-pill);
+    font-size:13.5px; font-weight:600; margin-bottom:26px; position:relative;
+  }
+  .online-pill .live-dot{ width:8px; height:8px; border-radius:50%; background:#7FE08A; box-shadow:0 0 0 4px rgba(127,224,138,.25); animation:pulse 2s infinite; }
+  @keyframes pulse{ 0%,100%{ transform:scale(1); } 50%{ transform:scale(1.3); } }
+  .discord-join{ position:relative; }
+
+  .members-strip{ display:flex; justify-content:center; margin-top:-24px; position:relative; }
+  .avatars{ display:flex; }
+  .avatars span{
+    width:44px; height:44px; border-radius:50%; border:3px solid var(--bg-sand);
+    background:linear-gradient(135deg,var(--sand-2),var(--sand-deep)); margin-left:-14px;
+    display:flex; align-items:center; justify-content:center; font-weight:800; color:var(--olive-deep); font-size:13px;
+  }
+  .avatars span:first-child{ margin-left:0; }
+
+  .perks-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:100px; }
+  @media(max-width:900px){ .perks-grid{ grid-template-columns:1fr 1fr; } }
+  @media(max-width:620px){ .perks-grid{ grid-template-columns:1fr; } }
+
+  .stat-band{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line);
+    border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; margin-top:90px;
+  }
+  .stat-band div{ background:#fff; padding:30px 16px; text-align:center; }
+  .stat-band b{ display:block; font-size:30px; font-weight:800; color:var(--olive-deep); }
+  .stat-band span{ font-size:12.5px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.06em; }
+  @media(max-width:700px){ .stat-band{ grid-template-columns:1fr 1fr; } }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" fill="#232B18"/><g stroke="#232B18" stroke-width="1.6" stroke-linecap="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></g></svg></span><span>Clarity<small>MINECRAFT · DESERT</small></span></a>
+    <div class="nav-links">
+      <a href="index.html">Главная</a>
+      <a href="donate.html">Донат</a>
+      <a href="discord.html">Discord</a>
+      <a href="about.html">О сервере</a>
+      <a href="social.html">Соцсети</a>
+      <a href="history.html">История</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn btn-primary btn-sm" data-copy="play.clarity.gg"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span class="full">play.clarity.gg</span></button>
+      <button class="nav-burger" aria-label="Меню"><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Главная</a>
+  <a href="donate.html">Донат</a>
+  <a href="discord.html">Discord</a>
+  <a href="about.html">О сервере</a>
+  <a href="social.html">Соцсети</a>
+  <a href="history.html">История</a>
+</div>
+
+<header class="discord-hero">
+  <div class="container">
+    <div class="discord-card reveal">
+      <div class="online-pill"><span class="live-dot"></span>1 284 участника онлайн прямо сейчас</div>
+      <h1>Комьюнити Clarity живёт в Discord</h1>
+      <p>Обсуждения, ивенты, розыгрыши привилегий и техподдержка — всё в одном месте. Присоединяйтесь, чтобы не пропустить обновления.</p>
+      <div class="discord-join">
+        <a href="https://discord.gg/clarity" target="_blank" rel="noopener" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.9A19.8 19.8 0 0 0 15.6 3l-.4.8a17.5 17.5 0 0 1 3.9 1.6c-2-.9-4-1.4-6-1.4s-4 .5-6 1.4A17.6 17.6 0 0 1 11 3.8L10.6 3a19.8 19.8 0 0 0-4.7 1.9C2.7 8.5 1.9 12 2.3 15.4a20 20 0 0 0 6 3l.9-1.5a13 13 0 0 1-2-1c.2-.1.3-.2.5-.3 3.9 1.8 8.1 1.8 12 0l.5.3a13 13 0 0 1-2 1l.9 1.5a20 20 0 0 0 6-3c.5-4-.6-7.4-3.8-10.5ZM9 13.2c-.9 0-1.7-.9-1.7-2s.7-2 1.7-2 1.7.9 1.7 2-.8 2-1.7 2Zm6 0c-.9 0-1.7-.9-1.7-2s.7-2 1.7-2 1.7.9 1.7 2-.8 2-1.7 2Z"/></svg>
+          Присоединиться к Discord
+        </a>
+      </div>
+    </div>
+    <div class="members-strip reveal">
+      <div class="avatars">
+        <span>ЖА</span><span>NK</span><span>ПВ</span><span>SD</span><span>+1.2K</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="container">
+  <div class="section-head reveal">
+    <div class="eyebrow" style="margin:0 auto 20px;"><span class="dot"></span>Что внутри</div>
+    <h2>Больше, чем просто чат</h2>
+    <p>Discord Clarity — это центр жизни проекта: новости, поддержка и общение с командой.</p>
+  </div>
+  <div class="perks-grid">
+    <div class="card reveal">
+      <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+      <h3>Голосовые каналы</h3>
+      <p>Играйте вместе, обсуждайте стройки и планы прямо в голосовых комнатах биома.</p>
+    </div>
+    <div class="card reveal reveal-delay-1">
+      <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h6"/><path d="M14 4h6v6M10 14 20 4"/></svg></div>
+      <h3>Еженедельные ивенты</h3>
+      <p>PvP-турниры, забеги по гробницам, конкурсы построек с призами каждую неделю.</p>
+    </div>
+    <div class="card reveal reveal-delay-2">
+      <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6M12 2v13M8 11l4 4 4-4"/></svg></div>
+      <h3>Розыгрыши привилегий</h3>
+      <p>Регулярные розыгрыши донат-тарифов и внутриигровых наборов среди участников.</p>
+    </div>
+    <div class="card reveal">
+      <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11Z"/></svg></div>
+      <h3>Быстрая поддержка</h3>
+      <p>Тикет-система и модераторы онлайн — вопросы решаются в течение часа.</p>
+    </div>
+    <div class="card reveal reveal-delay-1">
+      <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></div>
+      <h3>Открытые патчноуты</h3>
+      <p>Все обновления сервера публикуются в отдельном канале с подробным описанием.</p>
+    </div>
+    <div class="card reveal reveal-delay-2">
+      <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></div>
+      <h3>Дружная атмосфера</h3>
+      <p>Модерация следит за уважительным общением — никакого токсика и спама.</p>
+    </div>
+  </div>
+
+  <div class="stat-band reveal">
+    <div><b data-count="18400">0</b><span>Участников</span></div>
+    <div><b data-count="1284">0</b><span>Онлайн сейчас</span></div>
+    <div><b data-count="42">0</b><span>Каналов</span></div>
+    <div><b data-count="24" data-suffix="/7">0</b><span>Модерация</span></div>
+  </div>
+</section>
+
+<footer style="margin-top:110px;">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" fill="#232B18"/><g stroke="#F4C542" stroke-width="1.6" stroke-linecap="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></g></svg></span><span>Clarity</span></div>
+        <p style="max-width:280px; font-size:14px;">Современный Minecraft-сервер с пустынным биомом.</p>
+      </div>
+      <div class="footer-col"><h4>Проект</h4><a href="index.html">Главная</a><a href="about.html">О сервере</a><a href="history.html">История</a></div>
+      <div class="footer-col"><h4>Комьюнити</h4><a href="discord.html">Discord</a><a href="social.html">Соцсети</a><a href="donate.html">Донат</a></div>
+      <div class="footer-col"><h4>Сервер</h4><a data-copy="play.clarity.gg" href="javascript:void(0)">IP: play.clarity.gg</a><a href="discord.html">Поддержка</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Clarity. Проект не связан с Mojang AB.</span><span>Сделано с любовью к пустыне 🏜</span></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

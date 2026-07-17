@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Соцсети — Clarity</title>
+<meta name="description" content="Все соцсети Clarity в одном месте: Discord, Telegram, YouTube, TikTok, VK."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"/>
+<style>
+  .social-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  @media(max-width:900px){ .social-grid{ grid-template-columns:1fr 1fr; } }
+  @media(max-width:600px){ .social-grid{ grid-template-columns:1fr; } }
+
+  .social-card{
+    position:relative; padding:34px 28px; border-radius:var(--r-lg);
+    background:#fff; border:1px solid var(--line); overflow:hidden;
+    transition:.4s var(--ease); display:flex; flex-direction:column; gap:16px;
+  }
+  .social-card::before{
+    content:''; position:absolute; inset:0; opacity:0; transition:opacity .4s var(--ease);
+    background:radial-gradient(circle at 20% 0%, var(--sc,rgba(244,197,66,.3)), transparent 65%);
+  }
+  .social-card:hover{ transform:translateY(-8px) scale(1.01); box-shadow:var(--shadow-lg); border-color:transparent; }
+  .social-card:hover::before{ opacity:1; }
+  .social-card:hover .social-icon{ transform:rotate(-6deg) scale(1.08); }
+  .social-icon{
+    width:58px; height:58px; border-radius:18px; display:flex; align-items:center; justify-content:center;
+    background:var(--sc-bg,#F4C542); transition:.4s var(--ease); position:relative; z-index:1;
+  }
+  .social-icon svg{ width:28px; height:28px; }
+  .social-card h3{ font-size:19px; position:relative; z-index:1; }
+  .social-card p{ font-size:13.5px; color:var(--ink-soft); flex:1; position:relative; z-index:1; }
+  .social-meta{ display:flex; justify-content:space-between; align-items:center; position:relative; z-index:1; }
+  .social-count{ font-size:13px; font-weight:700; color:var(--olive-deep); }
+  .social-go{ font-size:13px; font-weight:700; color:var(--olive); display:inline-flex; align-items:center; gap:4px; }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" fill="#232B18"/><g stroke="#232B18" stroke-width="1.6" stroke-linecap="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></g></svg></span><span>Clarity<small>MINECRAFT · DESERT</small></span></a>
+    <div class="nav-links">
+      <a href="index.html">Главная</a>
+      <a href="donate.html">Донат</a>
+      <a href="discord.html">Discord</a>
+      <a href="about.html">О сервере</a>
+      <a href="social.html">Соцсети</a>
+      <a href="history.html">История</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn btn-primary btn-sm" data-copy="play.clarity.gg"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span class="full">play.clarity.gg</span></button>
+      <button class="nav-burger" aria-label="Меню"><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Главная</a>
+  <a href="donate.html">Донат</a>
+  <a href="discord.html">Discord</a>
+  <a href="about.html">О сервере</a>
+  <a href="social.html">Соцсети</a>
+  <a href="history.html">История</a>
+</div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="eyebrow reveal" style="margin:0 auto 20px;"><span class="dot"></span>Будьте на связи</div>
+    <h1 class="reveal reveal-delay-1">Соцсети Clarity</h1>
+    <p class="reveal reveal-delay-2">Следите за новостями, роликами и жизнью проекта в удобном для вас формате.</p>
+  </div>
+</header>
+
+<section class="container" style="padding-bottom:130px;">
+  <div class="social-grid">
+    <a href="https://discord.gg/clarity" target="_blank" rel="noopener" class="social-card reveal" style="--sc:rgba(88,101,242,.28)">
+      <div class="social-icon" style="--sc-bg:#5865F2"><svg viewBox="0 0 24 24" fill="#fff"><path d="M20.3 4.9A19.8 19.8 0 0 0 15.6 3l-.4.8a17.5 17.5 0 0 1 3.9 1.6c-2-.9-4-1.4-6-1.4s-4 .5-6 1.4A17.6 17.6 0 0 1 11 3.8L10.6 3a19.8 19.8 0 0 0-4.7 1.9C2.7 8.5 1.9 12 2.3 15.4a20 20 0 0 0 6 3l.9-1.5a13 13 0 0 1-2-1c.2-.1.3-.2.5-.3 3.9 1.8 8.1 1.8 12 0l.5.3a13 13 0 0 1-2 1l.9 1.5a20 20 0 0 0 6-3c.5-4-.6-7.4-3.8-10.5ZM9 13.2c-.9 0-1.7-.9-1.7-2s.7-2 1.7-2 1.7.9 1.7 2-.8 2-1.7 2Zm6 0c-.9 0-1.7-.9-1.7-2s.7-2 1.7-2 1.7.9 1.7 2-.8 2-1.7 2Z"/></svg></div>
+      <h3>Discord</h3>
+      <p>Комьюнити, ивенты, поддержка и общение с командой в реальном времени.</p>
+      <div class="social-meta"><span class="social-count">18.4K участников</span><span class="social-go">Перейти →</span></div>
+    </a>
+
+    <a href="https://t.me/clarity" target="_blank" rel="noopener" class="social-card reveal reveal-delay-1" style="--sc:rgba(41,169,222,.28)">
+      <div class="social-icon" style="--sc-bg:#29A9DE"><svg viewBox="0 0 24 24" fill="#fff"><path d="M21.9 4.3 2.7 11.7c-1.2.5-1.2 1.2-.2 1.5l4.9 1.5 1.9 5.8c.2.6.4.8.8.8.4 0 .5-.2.8-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.3-.4-1.8-1.9-1.4ZM7.9 14.4l9.6-6c.5-.3.9-.1.6.2l-8.2 7.4-.3 3.2-1.7-4.8Z"/></svg></div>
+      <h3>Telegram</h3>
+      <p>Быстрые новости, анонсы техработ и обсуждения без лишнего шума.</p>
+      <div class="social-meta"><span class="social-count">9.2K подписчиков</span><span class="social-go">Перейти →</span></div>
+    </a>
+
+    <a href="https://youtube.com/@clarity" target="_blank" rel="noopener" class="social-card reveal reveal-delay-2" style="--sc:rgba(255,0,0,.22)">
+      <div class="social-icon" style="--sc-bg:#FF3B30"><svg viewBox="0 0 24 24" fill="#fff"><path d="M23 12s0-3.6-.5-5.3a3 3 0 0 0-2.1-2.1C18.7 4 12 4 12 4s-6.7 0-8.4.6A3 3 0 0 0 1.5 6.7C1 8.4 1 12 1 12s0 3.6.5 5.3a3 3 0 0 0 2.1 2.1C5.3 20 12 20 12 20s6.7 0 8.4-.6a3 3 0 0 0 2.1-2.1c.5-1.7.5-5.3.5-5.3ZM10 15.5v-7l6 3.5-6 3.5Z"/></svg></div>
+      <h3>YouTube</h3>
+      <p>Обзоры обновлений, летсплеи и таймлапсы строек от участников.</p>
+      <div class="social-meta"><span class="social-count">6.7K подписчиков</span><span class="social-go">Перейти →</span></div>
+    </a>
+
+    <a href="https://tiktok.com/@clarity" target="_blank" rel="noopener" class="social-card reveal" style="--sc:rgba(35,43,24,.2)">
+      <div class="social-icon" style="--sc-bg:#232B18"><svg viewBox="0 0 24 24" fill="#F4C542"><path d="M16.6 5.8a4.6 4.6 0 0 1-3.3-1.9v9.7a4 4 0 1 1-3-3.9v2.1a1.9 1.9 0 1 0 1.3 1.8V2h2a4.6 4.6 0 0 0 3 3.6v.2Z"/></svg></div>
+      <h3>TikTok</h3>
+      <p>Короткие клипы с ивентов, забавные моменты и превью обновлений.</p>
+      <div class="social-meta"><span class="social-count">14.1K подписчиков</span><span class="social-go">Перейти →</span></div>
+    </a>
+
+    <a href="https://vk.com/clarity" target="_blank" rel="noopener" class="social-card reveal reveal-delay-1" style="--sc:rgba(0,119,255,.22)">
+      <div class="social-icon" style="--sc-bg:#0077FF"><svg viewBox="0 0 24 24" fill="#fff"><path d="M13.2 17.4c-6 0-9.4-4.1-9.6-11h3c.1 4.8 2.2 6.8 3.9 7.3v-7.3h2.8v4.3c1.6-.2 3.3-2 3.9-4.3h2.8c-.5 2.8-2.5 4.9-4 5.8 1.4.6 3.7 2.5 4.6 5.2h-3.1c-.7-2.2-2.3-3.8-4.2-4v4Z"/></svg></div>
+      <h3>VK</h3>
+      <p>Официальная группа с новостями, обсуждениями и фотоотчётами ивентов.</p>
+      <div class="social-meta"><span class="social-count">5.4K подписчиков</span><span class="social-go">Перейти →</span></div>
+    </a>
+
+    <div class="social-card reveal reveal-delay-2" style="--sc:rgba(244,197,66,.35); justify-content:center; align-items:flex-start;">
+      <div class="social-icon" style="--sc-bg:linear-gradient(135deg,#F4C542,#D9A62E)"><svg viewBox="0 0 24 24" fill="none" stroke="#232B18" stroke-width="2"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></div>
+      <h3>Все каналы сразу</h3>
+      <p>Не хотите выбирать? Начните с Discord — там собраны ссылки на все остальные площадки.</p>
+      <a href="discord.html" class="btn btn-dark btn-sm" style="margin-top:6px;">Перейти в Discord</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" fill="#232B18"/><g stroke="#F4C542" stroke-width="1.6" stroke-linecap="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></g></svg></span><span>Clarity</span></div>
+        <p style="max-width:280px; font-size:14px;">Современный Minecraft-сервер с пустынным биомом.</p>
+      </div>
+      <div class="footer-col"><h4>Проект</h4><a href="index.html">Главная</a><a href="about.html">О сервере</a><a href="history.html">История</a></div>
+      <div class="footer-col"><h4>Комьюнити</h4><a href="discord.html">Discord</a><a href="social.html">Соцсети</a><a href="donate.html">Донат</a></div>
+      <div class="footer-col"><h4>Сервер</h4><a data-copy="play.clarity.gg" href="javascript:void(0)">IP: play.clarity.gg</a><a href="discord.html">Поддержка</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Clarity. Проект не связан с Mojang AB.</span><span>Сделано с любовью к пустыне 🏜</span></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>О сервере — Clarity</title>
+<meta name="description" content="Особенности, уникальные механики и философия Minecraft-сервера Clarity."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"/>
+<style>
+  .about-split{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; margin-bottom:120px; }
+  @media(max-width:900px){ .about-split{ grid-template-columns:1fr; } }
+  .about-visual{
+    aspect-ratio:1/1; border-radius:var(--r-lg);
+    background:
+      radial-gradient(circle at 30% 20%, rgba(244,197,66,.5), transparent 55%),
+      radial-gradient(circle at 75% 75%, rgba(62,74,47,.35), transparent 55%),
+      linear-gradient(155deg, var(--sand-2), var(--sand-deep));
+    position:relative; overflow:hidden;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .about-visual svg{ width:46%; opacity:.9; }
+  .about-visual::after{
+    content:''; position:absolute; inset:0;
+    background:repeating-linear-gradient(45deg, rgba(255,255,255,.05) 0 2px, transparent 2px 14px);
+  }
+  .about-copy h2{ font-size:clamp(30px,3.6vw,42px); margin-bottom:18px; }
+  .about-copy p{ color:var(--ink-soft); font-size:16px; margin-bottom:16px; }
+
+  .mechanics-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+  @media(max-width:760px){ .mechanics-grid{ grid-template-columns:1fr; } }
+  .mechanic{
+    display:flex; gap:18px; padding:28px; border-radius:var(--r-lg); background:#fff; border:1px solid var(--line);
+    transition:.35s var(--ease);
+  }
+  .mechanic:hover{ transform:translateY(-4px); box-shadow:var(--shadow-md); border-color:var(--sand-line); }
+  .mechanic .num{ font-size:34px; font-weight:800; color:var(--sand-deep); line-height:1; }
+  .mechanic h4{ font-size:16.5px; margin-bottom:6px; }
+  .mechanic p{ font-size:13.5px; color:var(--ink-soft); }
+
+  .infographic{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin:110px 0;
+  }
+  @media(max-width:900px){ .infographic{ grid-template-columns:1fr 1fr; } }
+  .info-card{
+    padding:28px 22px; border-radius:var(--r-lg); text-align:center;
+    background:linear-gradient(160deg, rgba(255,255,255,.9), rgba(253,249,239,.6));
+    border:1px solid var(--line);
+  }
+  .info-card b{ display:block; font-size:32px; font-weight:800; color:var(--olive-deep); margin-bottom:4px; }
+  .info-card span{ font-size:13px; color:var(--ink-soft); }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" fill="#232B18"/><g stroke="#232B18" stroke-width="1.6" stroke-linecap="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></g></svg></span><span>Clarity<small>MINECRAFT · DESERT</small></span></a>
+    <div class="nav-links">
+      <a href="index.html">Главная</a>
+      <a href="donate.html">Донат</a>
+      <a href="discord.html">Discord</a>
+      <a href="about.html">О сервере</a>
+      <a href="social.html">Соцсети</a>
+      <a href="history.html">История</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn btn-primary btn-sm" data-copy="play.clarity.gg"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span class="full">play.clarity.gg</span></button>
+      <button class="nav-burger" aria-label="Меню"><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Главная</a>
+  <a href="donate.html">Донат</a>
+  <a href="discord.html">Discord</a>
+  <a href="about.html">О сервере</a>
+  <a href="social.html">Соцсети</a>
+  <a href="history.html">История</a>
+</div>
+
+<header class="page-hero">
+  <div class="container">
+    <div class="eyebrow reveal" style="margin:0 auto 20px;"><span class="dot"></span>О проекте</div>
+    <h1 class="reveal reveal-delay-1">Проект, построенный на песке смысла</h1>
+    <p class="reveal reveal-delay-2">Clarity — это Minecraft-сервер, где каждый элемент продуман: от генерации мира до системы приватов.</p>
+  </div>
+</header>
+
+<section class="container">
+  <div class="about-split reveal">
+    <div class="about-visual">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M3 21 12 4l9 17H3Z" fill="#232B18" opacity=".85"/><path d="M8 21 12 12l4 9H8Z" fill="#F4C542"/></svg>
+    </div>
+    <div class="about-copy">
+      <h2>Философия минимализма</h2>
+      <p>Мы намеренно отказались от перегруженных меню, десятков плагинов и хаотичной экономики. Clarity — это про ясность: понятные правила, честный баланс и мир, в который приятно возвращаться.</p>
+      <p>Пустынный биом выбран не случайно — это территория с богатой генерацией: оазисы, храмы, караванные пути и скрытые гробницы, которые открывают новый игровой опыт даже для опытных игроков.</p>
+      <a href="history.html" class="btn btn-dark" style="margin-top:10px;">Смотреть историю проекта</a>
+    </div>
+  </div>
+
+  <div class="section-head reveal">
+    <div class="eyebrow" style="margin:0 auto 20px;"><span class="dot"></span>Уникальные механики</div>
+    <h2>Чего нет в ванильной игре</h2>
+    <p>Авторский контент, разработанный командой Clarity специально для пустынного биома.</p>
+  </div>
+
+  <div class="mechanics-grid">
+    <div class="mechanic reveal">
+      <div class="num">01</div>
+      <div><h4>Караваны</h4><p>Торговые NPC-караваны путешествуют по миру — их можно сопровождать или перехватывать для редких наград.</p></div>
+    </div>
+    <div class="mechanic reveal reveal-delay-1">
+      <div class="num">02</div>
+      <div><h4>Песчаные бури</h4><p>Динамическое погодное событие снижает видимость и усиливает лут в открытых зонах — риск ради награды.</p></div>
+    </div>
+    <div class="mechanic reveal reveal-delay-2">
+      <div class="num">03</div>
+      <div><h4>Гробницы</h4><p>Процедурно генерируемые подземелья с ловушками, головоломками и боссами на пустынную тематику.</p></div>
+    </div>
+    <div class="mechanic reveal reveal-delay-3">
+      <div class="num">04</div>
+      <div><h4>Оазисная экономика</h4><p>Рынок ресурсов привязан к редким оазисам — контроль над территорией даёт честное экономическое преимущество.</p></div>
+    </div>
+  </div>
+
+  <div class="infographic">
+    <div class="info-card reveal"><b data-count="14">0</b><span>Уникальных построек</span></div>
+    <div class="info-card reveal reveal-delay-1"><b data-count="6">0</b><span>Игровых механик</span></div>
+    <div class="info-card reveal reveal-delay-2"><b data-count="120" data-suffix="км²">0</b><span>Карта мира</span></div>
+    <div class="info-card reveal reveal-delay-3"><b data-count="0" data-suffix="%">0</b><span>Pay-to-win</span></div>
+  </div>
+</section>
+
+<footer style="margin-top:110px;">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" fill="#232B18"/><g stroke="#F4C542" stroke-width="1.6" stroke-linecap="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></g></svg></span><span>Clarity</span></div>
+        <p style="max-width:280px; font-size:14px;">Современный Minecraft-сервер с пустынным биомом.</p>
+      </div>
+      <div class="footer-col"><h4>Проект</h4><a href="index.html">Главная</a><a href="about.html">О сервере</a><a href="history.html">История</a></div>
+      <div class="footer-col"><h4>Комьюнити</h4><a href="discord.html">Discord</a><a href="social.html">Соцсети</a><a href="donate.html">Донат</a></div>
+      <div class="footer-col"><h4>Сервер</h4><a data-copy="play.clarity.gg" href="javascript:void(0)">IP: play.clarity.gg</a><a href="discord.html">Поддержка</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Clarity. Проект не связан с Mojang AB.</span><span>Сделано с любовью к пустыне 🏜</span></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
